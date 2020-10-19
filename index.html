@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="background">
+<header>
+    <div class="center">
+        <div class="author column">
+            Базанов Евгений Сеергеевич<br>
+            Вариант 2304<br>
+            Группа P3212
+        </div>
+        <div class="column labName">
+            Лабораторная работа №1 по веб-программированию<br>
+            <hr id="ligth_line">
+        </div>
+        <div class="imgzone">
+            <img src="resources/itmo_logo.png" alt="itmo_logo">
+        </div>
+    </div>
+</header>
+<h2>Попадет ли точка в заданную область?</h2>
+<div class="content">
+    <div class="imgframe">
+        <img src="resources/area.png" alt="area">
+    </div>
+    <div id="inputvalues">
+        <form class="send_form" action="script.php" method="post" autocomplete="off">
+            <div class="inputY">
+                <input id="inputYZone" type="text" name="input-y" placeholder="Введите переменную Y" maxlength="5">
+            </div>
+            <div class="inputXR">
+                <div id="inputX">
+                    <p>X</p>
+                    <table class="tableZoneX">
+                        <tr>
+                            <td>
+                                <input type="button" value="-2.0" class="x_buttons" id="x_-2.0" onclick="changeX('-2.0')">
+                            </td>
+                            <td>
+                                <input type="button" value="-1.5" class="x_buttons" id="x_-1.5" onclick="changeX('-1.5')">
+                            </td>
+                            <td>
+                                <input type="button" value="-1.0" class="x_buttons" id="x_-1.0" onclick="changeX('-1.0')">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="-0.5" class="x_buttons" id="x_-0.5" onclick="changeX('-0.5')">
+                            </td>
+                            <td>
+                                <input type="button" value="0.0" class="x_buttons" id="x_0.0" onclick="changeX('0.0')">
+                            </td>
+                            <td>
+                                <input type="button" value="0.5" class="x_buttons" id="x_0.5" onclick="changeX('0.5')">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="1.0" class="x_buttons" id="x_1.0" onclick="changeX('1.0')">
+                            </td>
+                            <td>
+                                <input type="button" value="1.5" class="x_buttons" id="x_1.5" onclick="changeX('1.5')">
+                            </td>
+                            <td>
+                                <input type="button" value="2.0" class="x_buttons" id="x_2.0" onclick="changeX('2.0')">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="inputR">
+                    <p>R</p>
+                    <input type="button" value="1" class="r_buttons" id="r_1" onclick="changeR('1')">
+                    <input type="button" value="2" class="r_buttons" id="r_2" onclick="changeR('2')">
+                    <input type="button" value="3" class="r_buttons" id="r_3" onclick="changeR('3')">
+                    <input type="button" value="4" class="r_buttons" id="r_4" onclick="changeR('4')">
+                    <input type="button" value="5" class="r_buttons" id="r_5" onclick="changeR('5')">
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit">Отправить данные</button>
+            </div>
+        </form>
+    </div>
+    <div class="result_table">
+        <table class="tableZone">
+            <tr>
+                <td>X</td>
+                <td>Y</td>
+                <td>R</td>
+                <td>Время запуска</td>
+                <td>Время работы</td>
+                <td>Результат</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+<script src="validation.js">
+</script>
+</html>
